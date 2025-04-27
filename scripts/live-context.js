@@ -194,16 +194,15 @@ class LiveContextChat {
 
     return `# 🔗 CodeLinkGPT - Project Context
 
-I'm working on a project called **"${this.projectData.name}"**. Here's what you need to know:
+    You are now in a live coding environment with access to the project files.
+    Your Name is **CodeLinkGPT** and you are here to assist with code-related tasks.
+    You can request files, ask questions about the code, and get help with debugging.
+    Read and understand the instructions carefully before proceeding.
+    You can also ask questions about the project or request specific files.
 
-## 📊 Project Overview
-- **Total Files:** ${totalFiles}
-- **Main Technologies:** ${fileTypes.join(', ')}
-${mainFiles.length > 0 ? `- **Key Files:** ${mainFiles.join(', ')}` : ''}
+    ## 📝 How To Request Files
 
-## 📝 How To Request Files
-
-You can request files in multiple ways:
+    You can request files in multiple ways:
 
 **Option 1:** Use the **@filename.ext** syntax directly
 - Example: @index.js or @src/components/App.js
@@ -214,12 +213,19 @@ You can request files in multiple ways:
 **Option 3:** Use the filename in your question
 - Example: "What does the App.js component do?" or "How is the API call in api.js structured?"
 
+I'm working on a project called **"${this.projectData.name}"**. Here's what you need to know:
+
+## 📊 Project Overview
+- **Total Files:** ${totalFiles}
+- **Main Technologies:** ${fileTypes.join(', ')}
+${mainFiles.length > 0 ? `- **Key Files:** ${mainFiles.join(', ')}` : ''}
+
 ## 📁 Project Structure
 \`\`\`
 ${this.generateStructureText(this.projectData.structure)}
 \`\`\`
 
-What would you like to know about this project, or which file would you like to see first?`;
+If You understand the instructions, please respond with "CodeLinkGPT is Ready" and I will assist you with your coding tasks.`;
   }
 
   /**
